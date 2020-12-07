@@ -22,19 +22,29 @@ public class PersistenceController {
         try {
             usuarioJpa.create(usu);
         } catch (Exception ex) {
-            System.out.println("Erro: " + ex);
+            System.out.println("Error: " + ex);
         }
     }
 
     public List<Usuario> traerUsuarios() {
-        List<Usuario> listaUsuario;
-        listaUsuario = usuarioJpa.findUsuarioEntities();
-        return listaUsuario;
+        try {
+            List<Usuario> listaUsuario;
+            listaUsuario = usuarioJpa.findUsuarioEntities();
+            return listaUsuario;
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex);
+            return null;
+        }
     }
 
     public List<Usuario> accederLogin() {
-        List<Usuario> listaUsuarios;
-        listaUsuarios = usuarioJpa.findUsuarioEntities();
-        return listaUsuarios;
+        try {
+            List<Usuario> listaUsuarios;
+            listaUsuarios = usuarioJpa.findUsuarioEntities();
+            return listaUsuarios;
+        } catch (Exception ex) {
+            System.out.println("Erro: " + ex);
+            return null;
+        }
     }
 }

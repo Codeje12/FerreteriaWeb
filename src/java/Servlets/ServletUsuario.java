@@ -36,7 +36,7 @@ public class ServletUsuario extends HttpServlet {
             String password = request.getParameter("password");
             sesionActual.setAttribute("usuario", usuario);
             sesionActual.setAttribute("ferre", ferre);
-            response.sendRedirect("Bienvenidos.jsp");
+            response.sendRedirect("inicio.jsp");
         }else{
             response.sendRedirect("error-Login.jsp");
         }
