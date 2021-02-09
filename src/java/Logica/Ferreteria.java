@@ -5,6 +5,9 @@ import java.util.List;
 
 public class Ferreteria {
 
+    public Ferreteria() {
+    }
+
     PersistenceController persistence = new PersistenceController();
 
     /**

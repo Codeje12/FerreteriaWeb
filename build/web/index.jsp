@@ -30,15 +30,16 @@
                         <div class="panel-body">
 
 
-                            <form action="ServletUsuario" role="form" class="login-form" method="POST">
-                                <p class="title-login text-center">Iniciar Sesion</p>
+                            <form action="ServletLogin" role="form" class="login-form" method="POST">
+                                <p class="title-login text-center">Iniciar Sesión</p>
                                 <p>
                                     <select class="select-login text-center" name="usuario" >
                                         <% Ferreteria ferre = new Ferreteria();
                                         List<Usuario> listaUsuario = ferre.traerUsuario();
-                                        for (Usuario usu : listaUsuario) {%> 
+                                        for(Usuario usu :listaUsuario) { %> 
+                                        
                                         <option value="<%=usu.getTipoUsuario()%>"><%=usu.getTipoUsuario()%></option>
-                                        <%}%>
+                                        <% } %>
                                     </select>
                                 </p>    
                                 <p><input name="password" class="input-password text-center" type="password" placeholder="Password"/></p>

@@ -9,7 +9,7 @@ import javax.persistence.InheritanceType;
 
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)//TABLE_PER_CLASS,JOINED,SINGLE_TABLE
 @Entity
-public class Persona implements Serializable {
+public abstract class Persona implements Serializable {
     @Id
     int id;
     String nombre;

@@ -10,11 +10,10 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class Producto implements Serializable {
-
+  
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id        
     int id;
-    
     String nombreProducto;
     int stock;
     Date fechaIngreso;
@@ -22,18 +21,17 @@ public class Producto implements Serializable {
     Double precioVenta;
     String descripcion;
     
-    
     @OneToOne
-    ClassAbstracta marca;
-    ClassAbstracta rubro;
-    ClassAbstracta iva;
-    ClassAbstracta uMedida;
+    Marca marca;
+    Rubro rubro;
+    Iva iva;
+    UMedida uMedida;
     Proveedor proveedor;
 
     public Producto() {
     }
 
-    public Producto(int id, String nombreProducto, int stock, Date fechaIngreso, Double precioCosto, Double precioVenta, String descripcion, ClassAbstracta marca, ClassAbstracta rubro, ClassAbstracta iva, ClassAbstracta uMedida, Proveedor proveedor) {
+    public Producto(int id, String nombreProducto, int stock, Date fechaIngreso, Double precioCosto, Double precioVenta, String descripcion, Marca marca, Rubro rubro, Iva iva, UMedida uMedida, Proveedor proveedor) {
         this.id = id;
         this.nombreProducto = nombreProducto;
         this.stock = stock;
@@ -104,35 +102,35 @@ public class Producto implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public ClassAbstracta getMarca() {
+    public Marca getMarca() {
         return marca;
     }
 
-    public void setMarca(ClassAbstracta marca) {
+    public void setMarca(Marca marca) {
         this.marca = marca;
     }
 
-    public ClassAbstracta getRubro() {
+    public Rubro getRubro() {
         return rubro;
     }
 
-    public void setRubro(ClassAbstracta rubro) {
+    public void setRubro(Rubro rubro) {
         this.rubro = rubro;
     }
 
-    public ClassAbstracta getIva() {
+    public Iva getIva() {
         return iva;
     }
 
-    public void setIva(ClassAbstracta iva) {
+    public void setIva(Iva iva) {
         this.iva = iva;
     }
 
-    public ClassAbstracta getuMedida() {
+    public UMedida getuMedida() {
         return uMedida;
     }
 
-    public void setuMedida(ClassAbstracta uMedida) {
+    public void setuMedida(UMedida uMedida) {
         this.uMedida = uMedida;
     }
 

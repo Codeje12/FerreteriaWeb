@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/src/java/Logica/Ferreteria.java</file>
+            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/inicio.jsp</file>
             <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/index.jsp</file>
-            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/login/css/style.css</file>
-            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/src/java/Persistencia/PersistenceController.java</file>
-            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/src/java/Servlets/ServletUsuario.java</file>
+            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/plantillas/barra-Lado.jsp</file>
+            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/clientHome.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -1,38 +1,36 @@
 package Logica;
 
-import java.io.Serializable;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 @Entity
-public class TipoPago implements Serializable {
-    @Id
-    int id;
-    String Descripcion;
+public class TipoPago extends CheckBoxs {
 
     public TipoPago() {
     }
 
-    public TipoPago(int id, String Descripcion) {
-        this.id = id;
-        this.Descripcion = Descripcion;
+    public TipoPago(int id, String descripcion) {
+        super(id, descripcion);
     }
 
+    @Override
     public int getId() {
         return id;
     }
 
+    @Override
     public void setId(int id) {
         this.id = id;
     }
 
+    @Override
     public String getDescripcion() {
-        return Descripcion;
+        return descripcion;
     }
 
-    public void setDescripcion(String Descripcion) {
-        this.Descripcion = Descripcion;
+    @Override
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
     
-    
+
 }
