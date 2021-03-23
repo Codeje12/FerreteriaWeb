@@ -14,14 +14,25 @@ public class Usuario implements Serializable {
     int id;
     String password;
     String tipoUsuario;
+    String fotoPerfil;
 
+    
     public Usuario() {
     }
 
-    public Usuario(int id, String tipoUsuario, String password) {
+    public Usuario(int id, String password, String tipoUsuario, String fotoPerfil) {
         this.id = id;
-        this.tipoUsuario = tipoUsuario;
         this.password = password;
+        this.tipoUsuario = tipoUsuario;
+        this.fotoPerfil = fotoPerfil;
+    }
+    
+    public String getFotoPerfil() {
+        return fotoPerfil;
+    }
+
+    public void setFotoPerfil(String fotoPerfil) {
+        this.fotoPerfil = fotoPerfil;
     }
 
     public int getId() {

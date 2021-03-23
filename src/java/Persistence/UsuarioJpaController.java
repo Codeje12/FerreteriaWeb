@@ -2,7 +2,7 @@
 package Persistencia;
 
 import Logica.Usuario;
-import Persistencia.exceptions.NonexistentEntityException;
+import Persistence.exceptions.NonexistentEntityException;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;

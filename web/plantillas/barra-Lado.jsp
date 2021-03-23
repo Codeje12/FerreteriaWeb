@@ -1,26 +1,5 @@
-<%
-    String pagHome = "inicio.jsp";
+<%@include file="../app/config.jsp"%>
 
-    /*Paginas Clientes*/
-    String pagClient = "clientHome.jsp";
-    String pagListClient = "listClient.jsp";
-    String pagAddClient = "addClient.jsp";
-    String pagDeletClient = "deletClient.jsp";
-
-    /*paginas de Negocio*/
-    String pagSale = "saleHome.jsp";
-    String pagBuy = "buyHome.jsp";
-
-    /*Paginas Producto*/
-    String pagProduct = "productHome.jsp";
-    String pagAddProduct = "addProduct.jsp";
-    String pagDeletProduct = "deletProduct.jsp";
-    String pagListProduct = "listProduct.jsp";
-
-    /*Pagina Ususarios*/
-    String pagUser = "usuarios.jsp";
-    ;
-%>
 <aside id="left-panel" class="left-panel">
 
     <nav class="navbar navbar-expand-sm navbar-default">
@@ -34,7 +13,7 @@
 
                 <!--Pag Home-->
                 <li class="active">
-                    <a href="<%=pagHome%>"><i class="menu-icon fa fa-home"></i>Home</a>
+                        <a href="<%=pagHome%>"><i class="menu-icon fa fa-home"></i>Home</a>
                 </li>
 
                 <li class="menu-title">Main</li><!-- /.menu-title -->
@@ -43,7 +22,7 @@
                 <li class="menu-item-has-children dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-user"></i>Client</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-users"></i><a href="<%=pagClient%>">Add</a></li>
+                        <li><i class="fa fa-users"></i><a href="<%=pagAddClient%>">Add</a></li>
                         <li><i class="fa fa-trash-o"></i><a href="<%=pagDeletClient%>">Delet</a></li>
                         <li><i class="fa fa-bars"></i><a href="<%=pagListClient%>">List</a></li>
                     </ul>

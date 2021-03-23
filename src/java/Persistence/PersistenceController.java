@@ -51,4 +51,36 @@ public class PersistenceController {
             return null;
         }
     }
+
+    public Usuario traerUsuarioUnico(String user) {
+        Usuario usuario;
+        List<Usuario> listaUsuarios = this.usuarioJpa.findUsuarioEntities();
+        for (Usuario usuarios : listaUsuarios) {
+            if (usuarios.getTipoUsuario().equals(user)) {
+                try {
+                    usuario = usuarios;
+                    return usuario;
+                } catch (Exception ex) {
+                    System.out.println("");
+                    return null;
+                }
+            }
+        }
+        return null;
+    }
+
+    public void guardarFoto() {
+
+    }
+
+    public void savePhoto(Usuario usuario) {
+        try {
+            this.usuarioJpa.edit(usuario);
+        } catch (Exception ex) {
+            System.out.println("");
+
+        }
+
+    }
+
 }

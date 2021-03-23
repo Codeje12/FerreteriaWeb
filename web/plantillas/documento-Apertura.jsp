@@ -1,21 +1,17 @@
-<%
-    String titulo = "";
-%>
+<%@page import="Logica.Ferreteria"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="../app/config.jsp"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        
         <%
-            if(titulo != "" || !titulo.isEmpty()){%>
-        <title><%=titulo%>
-            <%}else{%>
-                "Ferreteria Codeje"
-            <%}%>
-            </title>
+            String titulo = "Ferreteria";
+        %>
+    <title>"<%=titulo%>"</title>
+         
+        
         <meta name="description" content="Ferreteria Codeje">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 

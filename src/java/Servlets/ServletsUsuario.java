@@ -1,16 +1,16 @@
 package Servlets;
 
 import Logica.Ferreteria;
+import Logica.Usuario;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-@WebServlet(name = "ServletLogin", urlPatterns = {"/ServletLogin"})
-public class ServletLogin extends HttpServlet {
+@WebServlet(name = "ServletsUsuario", urlPatterns = {"/ServletsUsuario"})
+public class ServletsUsuario extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -22,23 +22,16 @@ public class ServletLogin extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
 
-        /*  Codigo  */
-        boolean permiso = false;
-        Ferreteria ferre = new Ferreteria();
+        String fotoPerfil = request.getParameter("profilePhoto");
+        String user = (String) request.getSession().getAttribute("usuario");
+        Ferreteria ctr = new Ferreteria();
 
-        permiso = ferre.verficacionAcceso(request.getParameter("usuario"), request.getParameter("password"));
-
-        if (permiso) {
-            HttpSession sesionActual = request.getSession(true);
-            String usuario = request.getParameter("usuario");
-            String password = request.getParameter("password");
-            sesionActual.setAttribute("usuario", usuario);
-            sesionActual.setAttribute("ferre", ferre);
+        if (fotoPerfil == "" || fotoPerfil == null || fotoPerfil == "") {
             response.sendRedirect("inicio.jsp");
         } else {
-            response.sendRedirect("error-Login.jsp");
+            ctr.getsavePhoto(user, fotoPerfil);
+            response.sendRedirect("inicio.jsp");
         }
-
     }
 
     @Override

@@ -4,9 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/inicio.jsp</file>
-            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/index.jsp</file>
-            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/plantillas/barra-Lado.jsp</file>
-            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/clientHome.jsp</file>
+            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/plantillas/barra-Top.jsp</file>
+            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/src/java/Logica/Ferreteria.java</file>
+            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/src/java/Servlets/ServletsUsuario.java</file>
+            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/web/ProfileUser.jsp</file>
+            <file>file:/C:/Users/Enrique%20Esteche/Documents/NetBeansProjects/Ferreteria/src/java/Persistence/PersistenceController.java</file>
         </group>
     </open-files>
 </project-private>

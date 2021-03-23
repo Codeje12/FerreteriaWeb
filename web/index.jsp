@@ -8,15 +8,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Iniciar sesion</title>
-        
+
         <link href="login/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="login/font-awesome/css/font-awesome.css" rel="stylesheet" />
         <link href="login/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
         <link href="login/css/style.css" rel="stylesheet" />
         <link href="login/css/main-style.css" rel="stylesheet" />
     </head>
-    
-    <body class="fondo width:100%">
+
+    <body class="fondo width:100%"> 
         <div class="container">
 
             <div class="row">
@@ -34,12 +34,18 @@
                                 <p class="title-login text-center">Iniciar Sesión</p>
                                 <p>
                                     <select class="select-login text-center" name="usuario" >
-                                        <% Ferreteria ferre = new Ferreteria();
-                                        List<Usuario> listaUsuario = ferre.traerUsuario();
-                                        for(Usuario usu :listaUsuario) { %> 
+                                        <% Ferreteria ferreteria = new Ferreteria();    
+                                        List<Usuario> listaUsuario = ferreteria.traerUsuario();
+                                        try{
+                                            for (Usuario usu : listaUsuario) {%> 
+                                            <option value="<%=usu.getTipoUsuario()%>"><%=usu.getTipoUsuario()%></option>
+                                            <%}
+                                           }catch(Exception ex){%>
+                                           <option>No se econtraron usuario</option>
+                                        <%}%>
                                         
-                                        <option value="<%=usu.getTipoUsuario()%>"><%=usu.getTipoUsuario()%></option>
-                                        <% } %>
+ 
+                                            
                                     </select>
                                 </p>    
                                 <p><input name="password" class="input-password text-center" type="password" placeholder="Password"/></p>
@@ -61,5 +67,5 @@
         <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
 
     </body>
-    
+
 </html>

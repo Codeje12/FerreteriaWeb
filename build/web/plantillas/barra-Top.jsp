@@ -1,8 +1,12 @@
+<%@page import="java.util.List"%>
+<%@page import="Logica.Ferreteria"%>
+<%@page import="Logica.Usuario"%>
+<%@include file="../app/config.jsp"%>
 <!-- Header-->
 <header id="header" class="header">
     
     <div class="top-left">
-        <a class="navbar-brand" href="HomeClient.jsp"><img src="images/logo.png" alt="Logo"></a>    
+        <a class="navbar-brand" href="<%=pagHome%>"><img src="images/logo.png" alt="Logo"></a>    
         <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
     </div>
     
@@ -17,7 +21,7 @@
                     </form>
                 </div>
 
-                <div class="dropdown for-notification">
+                <!--<div class="dropdown for-notification">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-bell"></i>
                         <span class="count bg-danger">3</span>
@@ -80,24 +84,31 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="user-area dropdown float-right">
                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                    <%
+                        
+                     Ferreteria ctr = new Ferreteria();/*Clase controladora*/
+                     Usuario usuario = new Usuario();
+                     /*Traigo de la base de datos el usuario que esta con su sesion iniciada actualmente.*/
+                     usuario = ctr.traerUsuarioUnico((String)request.getSession().getAttribute("usuario"));  
+                    %>
+                    <img class="user-avatar rounded-circle" src="<%=usuario.getFotoPerfil()%>" alt="User Avatar">
                 </a>
-
+                
                 <div class="user-menu dropdown-menu">
-                    <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
+                    
+                    <a class="nav-link" href="<%=profileUser%>"><i class="fa fa- user"></i>Profile photo</a>
 
-                    <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
+                    <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">2</span></a>
 
                     <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
 
-                    <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
+                    <a class="nav-link" href="logout.jsp"><i class="fa fa-power -off"></i>Logout</a>
                 </div>
-            </div>
-
+            </div>                   
         </div>
     </div>
 </header>
