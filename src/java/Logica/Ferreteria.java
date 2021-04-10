@@ -9,9 +9,35 @@ public class Ferreteria {
     }
 
     PersistenceController persistence = new PersistenceController();
-
+    
+    
     /**
-     * ****************** Usuarios ***********************
+     * ******Metodos/Funciones de imaginacion del Programador*********
+     */
+    public List<Object> tablaAdaptable(Object xobjeto) {
+        List<Object> lista;
+        Cliente cliente = new Cliente();
+        Producto producto = new Producto();
+        try {
+            if (xobjeto != null) {
+                if (xobjeto.equals(cliente)) {
+                    lista = this.persistence.traerClientes();
+                    return lista;
+                } else if (xobjeto.equals(producto)) {
+                    lista = this.persistence.traerProductos();
+                    return lista;
+                }
+            }
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex);
+            return null;
+        }
+        return null;
+    }
+
+    
+    /**
+     * ****************** Usuario***********************
      */
     public List<Usuario> traerUsuario() {
         List<Usuario> listaUsuario = persistence.traerUsuarios();
@@ -45,23 +71,49 @@ public class Ferreteria {
         Usuario usuario;
         try {
             usuario = this.persistence.traerUsuarioUnico(user);
-            
+
             return usuario;
         } catch (Exception ex) {
             return null;
         }
     }
 
-    public void getsavePhoto(String user,String fotoPerfil) {
+    public void getsavePhoto(String user, String fotoPerfil) {
         Usuario usuario = this.traerUsuarioUnico(user);
         String fp = "images/" + fotoPerfil;
-        try{
+        try {
             usuario.setFotoPerfil(fp);
             persistence.savePhoto(usuario);
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("Error: " + ex);
         }
     }
 
+    /**
+     * **********Clientes****************
+    */
+    public List traerClientes() {
+        List listaClientes;
+        try {
+            listaClientes = this.persistence.traerClientes();
+            return listaClientes;
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex);
+            return null;
+        }
+    }
 
+    /**
+     * *****Productos*******
+     */
+    public List<Producto> traerProductos() {
+         List listaProductos;
+        try {
+            listaProductos = this.persistence.traerProductos();
+            return listaProductos;
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex);
+            return null;
+        }
+    }
 }

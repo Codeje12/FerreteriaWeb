@@ -60,14 +60,12 @@
             #flotLine5  {
                 height: 105px;
             }
-
             #flotBarChart {
                 height: 150px;
             }
             #cellPaiChart{
                 height: 160px;
             }
-
         </style>
     </head>
     <body>

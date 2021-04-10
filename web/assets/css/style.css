@@ -13,14 +13,22 @@
 /* 
 
 
+
 Googel Fonts  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 /* Googel Fonts End  
 
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+
+.fondoInicio{
+    
+}
+
 .bg-flat-color-1 {
-    background: #00c292; }
+    background: #00c292; 
+}
 
 .bg-flat-color-2 {
     background: #ab8ce4; }
@@ -346,7 +354,7 @@ Googel Fonts  */
     transition: all 0.3s ease; }
 
 body {
-    background-image: url('../images/MenuFerreteria.jpg')!important;
+    background-image: url('MenuFerreteria.jpg') !important;
     display: table;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -402,7 +410,12 @@ button:focus {
     cursor: not-allowed; }
 
 img {
-    max-width: 100%; }
+    max-width: 100%; 
+}
+
+.img {
+    max-width: 100%; 
+}
 
 .modal-header {
     display: block; }
@@ -578,10 +591,12 @@ aside.left-panel:hover {
     overflow-x: scroll; }
 
 .open aside.left-panel:hover {
-    overflow-x: inherit; }
+    overflow-x: inherit; 
+}
 
 .small-device .right-panel {
-    margin-left: 83px; }
+    margin-left: 83px; 
+}
 
 .navbar {
     background: #fff;

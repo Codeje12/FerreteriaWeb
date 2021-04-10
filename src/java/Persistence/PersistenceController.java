@@ -10,7 +10,7 @@ public class PersistenceController {
     CompraJpaController compraJpa = new CompraJpaController();
     IvaJpaController ivaJpa = new IvaJpaController();
     MarcaJpaController marcaJpa = new MarcaJpaController();
-    ProductoJpaController productoJPa = new ProductoJpaController();
+    ProductoJpaController productoJpa = new ProductoJpaController();
     ProveedorJpaController proveedorJpa = new ProveedorJpaController();
     RubroJpaController rubroJpa = new RubroJpaController();
     TipoPagoJpaController tipo_pagoJpa = new TipoPagoJpaController();
@@ -81,6 +81,28 @@ public class PersistenceController {
 
         }
 
+    }
+
+    public List traerClientes() {
+        List listaClientes;
+        try{
+            listaClientes = this.clienteJpa.findClienteEntities();
+            return listaClientes;
+        }catch(Exception ex){
+            System.out.println("Error: " + ex);
+            return null;
+        }
+    }
+
+    public List traerProductos() {
+        List listaProductos;
+        try{
+            listaProductos = this.productoJpa.findProductoEntities();
+            return listaProductos;
+        }catch(Exception ex){
+            System.out.println("Error: " + ex);
+            return null;
+        }
     }
 
 }
